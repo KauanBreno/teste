@@ -33,6 +33,9 @@ public class Main {
                     System.out.printf("Salário bruto: R$ %.2f%n", f.calcularSalarioBruto());
                     System.out.printf("Desconto INSS: R$ %.2f%n", f.calcularDescontoINSS());
                     System.out.printf("Salário líquido: R$ %.2f%n", f.getSalarioLiquido());
+
+                    // Salva a lista atualizada de funcionários no JSON automaticamente
+                    jsonService.salvarComoJson(service.listarFuncionarios(), "funcionarios.json");
                 }
 
                 case 2 -> {
